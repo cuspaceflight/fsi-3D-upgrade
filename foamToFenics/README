@@ -1,0 +1,10 @@
+To import ANSYS meshes, do 
+    fluentMeshToFoam <your msh file>
+replacing <your msh file> with the full filename and extension of your .msh file.
+
+To import an existing OpenFOAM mesh, do
+    cp -r <path to existing case>/constant/polyMesh constant
+
+To export to FEniCS once a polyMesh directory is present, do
+    ./exportFenics
+

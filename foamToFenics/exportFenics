@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e -u
+
+echo "Writing VTK ..."
+foamToVTK > log.foamToVTK
+cp VTK/foamToFenics_0/internal.vtu .
+echo "Converting to .xml ..."
+meshio c internal.vtu fenicsmesh.xml
+echo "Output saved as fenicsmesh.xml"
